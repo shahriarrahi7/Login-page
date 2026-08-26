@@ -9,24 +9,62 @@
     <body>
         <div class="wrapper">
             <from action="">
-                <h1>Login</h1>
-                <div class="input-box">
-                    <input type="text" placeholder="Username" required><i class="bx bx-user"></i>
 
-                </div>
+                <!--Heading-->
+                <h1>Welcome Back!</h1>
+                <p class = "login-text">
+                    Please Log to your account.
+                </p>
+
+
+                <!--username-->
                 <div class="input-box">
-                    <input type="password" placeholder="Password"><i class="bx bx-lock"></i> 
+                    <input type="text" placeholder="Username" autocomplete="Username" required>
+                    <i class="bx bx-user"></i>
                 </div>
+                <small class="error-messege" id="username Error"></small>
+
+
+                <!--password-->
+                <div class="input-box">
+                    <input type="password" placeholder="Password" autocomplete="current-password">
+                    <i class="bx bx-lock password-icon"
+                    id="passwordToggle">
+                </i> 
+                </div>
+
+                <small class="error-messege" id="passwordError"></small>
+
+
+                <!--Remember+ Forget pass-->
                 <div class="remeber-forgot">
-                    <label><input type="checkbox">Remeber Me</label>
-                    <a href="#">Forgot password</a>
+                    <label>
+                        <input type="checkbox" id="remember">
+                        Remeber Me
+                    </label>
+
+                    <a href="#">
+                        Forgot password?
+                    </a>
                 </div>
-
-                <button type="submit" class="btn">Login</button>
-
-                <div class="register-link"><p>Don't Have any Account? <a href="#">Register</a></p></div>
+                 
+                <!--log in button-->
+                <button 
+                type="submit" class="btn"
+                >
+                <span id = "buttonText">Login</span>
+                <span id="loader"></span>
+            </button>
+                 
+            <!--Registration-->
+                <div class="register-link">
+                    <p>Don't Have any Account?
+                     <a href="#">Register</a>
+                    </p>
+                </div>
             </from>
 
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
